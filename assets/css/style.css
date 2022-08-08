@@ -1,0 +1,313 @@
+@import url("https://fonts.googleapis.com/css2?family=Walter+Turncoat&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Walter Turncoat", cursive;
+}
+
+:root {
+    font-size: 100%;
+    --text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff,
+        1px 1px #fff;
+    --text-shadow-black: 2px 0 0 rgb(0, 0, 0), -2px 0 0 rgb(0, 0, 0),
+        rgb(0, 0, 0) x 0 rgb(0, 0, 0), 0 -2px 0 rgb(0, 0, 0),
+        1px 1px rgb(0, 0, 0);
+}
+
+/* Pagina Incial - Menu*/
+
+
+
+body {
+    /*overflow: hidden;*/
+    width: 100%;
+    /*height: 100vh;*/
+    background: url(../img/imagem-portadosheriff.jpg);
+    background-size: cover;
+}
+
+
+h2 {
+    font-size: 200%;
+    text-align: center;
+    margin-bottom: 0.7rem;
+    text-shadow: var(--text-shadow);
+    animation: bounceInDown;
+    animation-duration: 3s;
+}
+
+header {
+    display: flex;
+}
+
+#menu {
+    width: 100%;    
+    height: 6vh; /*alterado de 50vh em 28-07-22*/
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    
+}
+
+.buttons {
+    display: flex;
+    width: 20vw; 
+    height: 6vh;
+    font-size: 110%;
+    border-radius: 10px;
+    border: 1px black solid;
+    font-weight: 600;
+    transition: 500ms;
+    text-decoration: none;
+    align-items: center;
+    justify-content:center;
+    color: black;
+    background-color: goldenrod;
+}
+
+.buttons:hover {
+    background-color: darkslateblue;
+    color: aliceblue;
+    cursor: pointer;
+}
+
+
+.screen {
+    width: 100%;
+    margin-top: 0.5rem auto;
+    display: flex;
+    /*flex-shrink: 2;*/
+    justify-content: center;
+    align-items: center;
+}
+
+#canvas {
+    display: flex;
+    width: 40%;
+    height: 30vh;
+    flex-shrink: 2;
+    max-width: 1200px;
+    max-height: 800px;
+    min-width: 280px;
+    min-height: 250px;
+    border-radius: 10px;
+    margin: 0.1rem auto;
+    /*background-color: rgba(109, 78, 10, 0.9);*/
+    background-color: rgba(85, 82, 74, 0.9)
+    box-shadow: 5px 5px 5px 2px rgba(0, 0, 0, 0.5);
+    animation: zoomIn;
+    animation-duration: 1s;
+}
+
+#palavra{
+    display: flex;
+}
+
+#dica-teclado {
+    display: flex;
+    /*margin: 0 auto;*/
+    margin-left: 1rem;
+    width: 45%;
+    font-size: 140%;
+    align-items:initial;
+}
+
+#dica{
+    color: darkred;
+    font-weight: 600;
+    text-shadow: var(--text-shadow);
+}
+
+#dica__texto{
+    color: darkred;
+    text-shadow: var(--text-shadow);
+    font-weight: 600;
+    margin-left: 1rem;
+}
+
+
+.teclado{
+    padding: 0.5rem;
+    justify-content: center;
+    
+        
+}
+
+#autor{
+    display: flex;
+    color: white;
+    justify-content:space-between;
+
+}
+
+#link__git{
+    color:white;
+}
+
+.teclado__area {
+    width: 42%;
+    border: solid 2px #ffffff;
+    border-radius: 10px;
+
+}
+
+
+.teclado__botao{
+    width: 3rem;
+    height: 3rem;
+    text-align: center;
+    align-items: center;
+    
+}
+
+.teclado__botao:hover {
+    color: goldenrod;
+    cursor: pointer;
+    animation: jello;
+    animation-delay: 6s;
+    animation-duration: 1s;
+}
+
+.teclado__linha1 {
+    margin-left: 0.65rem;
+    margin-bottom: 0.5;
+ 
+}
+ 
+.teclado__linha2 {
+     margin-left: 1.75rem;
+     margin-bottom: 0.5;
+  
+}
+ 
+.teclado__linha3 {
+     margin-left: 3.85rem;
+  
+}
+
+
+
+#tabuleiro {
+    width: 50%;
+    margin-top: 0.5rem;
+    /*display: flex;
+    flex-shrink: 2;
+    justify-content: center;*/
+}
+
+input {
+    display: flex;
+    flex-shrink: 3;
+    width: 4rem;
+    color: darkred;
+    text-shadow: var(--text-shadow);
+    border: none;
+    outline: none;
+    border-bottom: 5px solid black;
+    margin: 2px;
+    font-size: 200%;
+    font-weight: 800;
+    text-align: center;
+    animation: backInDown;
+    animation-duration: 2.4s;
+}
+
+.input {
+    visibility: hidden;
+}
+
+
+
+/*Responsivo*/
+
+@media screen and (max-width: 768px) {
+    body {
+        overflow: auto;
+        background-position: 65%;
+    }
+
+       
+
+    #canvas {
+        width: 90%;
+    }
+
+    #tabuleiro {
+        width: 100%;
+    }
+
+    
+}
+
+@media screen and (max-width: 480px) {
+    
+    header{
+        display: block;
+    }
+
+    h2 {
+        font-size: 140%;
+        margin-bottom: 0.5rem;
+    }
+
+    #menu {
+        width: 100%;
+        
+    }
+
+    .buttons {
+        width: 8rem;
+        font-size: 90%;
+    }
+
+    .screen {
+        width: 30%;
+        margin: 1rem auto;    
+                
+    }
+
+    #palavra{
+        display: block;
+    }
+    
+    #dica-teclado {
+        width: 90%;
+        font-size: 120%;
+        
+    }
+      
+
+    input {
+        margin: -1rem 2px;
+        width: 2rem;
+        height: 5.1vh;
+    }
+
+    #tabuleiro {
+        width: 55%;
+    }
+
+    .teclado{
+        width: 100%;        
+                
+    }
+
+    .teclado__area {
+        width: 100%;
+    }
+    .teclado__botao{
+        font-size: 130%;
+        width: 1.8rem;
+        height: 1.8rem;
+    }
+
+    #autor{
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+    
+    }
+   
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="assets/css/style.css" />
+        
+        <!--<link rel="icon" type="image/png" href="assets/img/icon.png" />-->
+        <title>Jogo da Forca</title>
+    </head>
+    <body>
+        <header>
+           
+            <h2>Jogo da Forca</h2>
+            <div id="menu">
+                <button id="to-game" class="buttons" onclick="iniciarJogo()" >Iniciar Jogo</button>
+                <!--<a href="#" class="buttons">Adicionar Palavra</a>-->
+                                
+            </div>
+        </header>
+        
+        <main>
+            <div class="screen">
+                <canvas id="canvas" width="600" height="300"></canvas>
+            </div>
+
+            <div id="palavra">
+                <div id="dica-teclado">
+                    <p id="dica">Dica:</p>
+                    <p id="dica__texto"></p>
+                    
+                </div>
+        
+                <div id="tabuleiro">
+                    <canvas id="tabuleiro__canvas" width="375" height="90"></canvas>
+                </div>
+            </div>
+            
+            <section class="teclado">
+                <div class="teclado__area">
+                    <div class="teclado__linha1">
+                        <button class="teclado__botao" id="tecla__q" onclick="letraClicada(document.getElementById('tecla__q').innerHTML)">Q</button>
+                        <button class="teclado__botao" id="tecla__w" onclick="letraClicada(document.getElementById('tecla__w').innerHTML)">W</button>
+                        <button class="teclado__botao" id="tecla__e" onclick="letraClicada(document.getElementById('tecla__e').innerHTML)">E</button>
+                        <button class="teclado__botao" id="tecla__r" onclick="letraClicada(document.getElementById('tecla__r').innerHTML)">R</button>
+                        <button class="teclado__botao" id="tecla__t" onclick="letraClicada(document.getElementById('tecla__t').innerHTML)">T</button>
+                        <button class="teclado__botao" id="tecla__y" onclick="letraClicada(document.getElementById('tecla__y').innerHTML)">Y</button>
+                        <button class="teclado__botao" id="tecla__u" onclick="letraClicada(document.getElementById('tecla__u').innerHTML)">U</button>
+                        <button class="teclado__botao" id="tecla__i" onclick="letraClicada(document.getElementById('tecla__i').innerHTML)">I</button>
+                        <button class="teclado__botao" id="tecla__o" onclick="letraClicada(document.getElementById('tecla__o').innerHTML)">O</button>
+                        <button class="teclado__botao" id="tecla__p" onclick="letraClicada(document.getElementById('tecla__p').innerHTML)">P</button>
+
+                    </div>
+                    <div class="teclado__linha2">
+                        <button class="teclado__botao" id="tecla__a" onclick="letraClicada(document.getElementById('tecla__a').innerHTML)">A</button>
+                        <button class="teclado__botao" id="tecla__s" onclick="letraClicada(document.getElementById('tecla__s').innerHTML)">S</button>
+                        <button class="teclado__botao" id="tecla__d" onclick="letraClicada(document.getElementById('tecla__d').innerHTML)">D</button>
+                        <button class="teclado__botao" id="tecla__f" onclick="letraClicada(document.getElementById('tecla__f').innerHTML)">F</button>
+                        <button class="teclado__botao" id="tecla__g" onclick="letraClicada(document.getElementById('tecla__g').innerHTML)">G</button>
+                        <button class="teclado__botao" id="tecla__h" onclick="letraClicada(document.getElementById('tecla__h').innerHTML)">H</button>
+                        <button class="teclado__botao" id="tecla__j" onclick="letraClicada(document.getElementById('tecla__j').innerHTML)">J</button>
+                        <button class="teclado__botao" id="tecla__k" onclick="letraClicada(document.getElementById('tecla__k').innerHTML)">K</button>
+                        <button class="teclado__botao" id="tecla__l" onclick="letraClicada(document.getElementById('tecla__l').innerHTML)">L</button>
+                        
+                    </div>
+                    <div class="teclado__linha3">
+                        <button class="teclado__botao" id="tecla__z" onclick="letraClicada(document.getElementById('tecla__z').innerHTML)">Z</button>
+                        <button class="teclado__botao" id="tecla__x" onclick="letraClicada(document.getElementById('tecla__x').innerHTML)">X</button>
+                        <button class="teclado__botao" id="tecla__c" onclick="letraClicada(document.getElementById('tecla__c').innerHTML)">C</button>
+                        <button class="teclado__botao" id="tecla__v" onclick="letraClicada(document.getElementById('tecla__v').innerHTML)">V</button>
+                        <button class="teclado__botao" id="tecla__b" onclick="letraClicada(document.getElementById('tecla__b').innerHTML)">B</button>
+                        <button class="teclado__botao" id="tecla__n" onclick="letraClicada(document.getElementById('tecla__n').innerHTML)">N</button>
+                        <button class="teclado__botao" id="tecla__m" onclick="letraClicada(document.getElementById('tecla__m').innerHTML)">M</button>
+                        
+                    </div>
+                </div>
+
+                
+
+            </section>
+                    
+            <footer id="autor">
+                <p>by Luiz Carlos</p>
+                <a href="https://github.com/Lcarlos-lucasi" id="link__git">https://github.com/Lcarlos-lucasi</a>
+            </footer>
+
+        </main>
+              
+        
+        <script src="./assets/js/jogar.js"></script>
+        <script src="./assets/js/enforcado.js"></script>
+    </body>
+</html>
