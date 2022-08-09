@@ -26,8 +26,6 @@ function iniciarJogo(){
     tecladoHabilitado = true
 
     palavraSecreta=escolherPalavraSecreta()
-    console.log(palavraSecreta)
-    console.log(palavraSecreta.length)
     
     escreverTracinhos()
     
@@ -37,7 +35,7 @@ function iniciarJogo(){
 function escolherPalavraSecreta(){
     var i = Math.floor(Math.random()*palavras.length);
     var palavra = palavras[i];
-    console.log(palavra);
+   
     palavraSecreta = palavra[0];
     
     
@@ -51,7 +49,7 @@ function escolherPalavraSecreta(){
 
 function escreverTracinhos(){
     
-    tabuleiro.clearRect(0, 0, 375, 90)
+    tabuleiro.clearRect(0, 0, 375, 80)
     tabuleiro.lineWidth =4
     tabuleiro.lineCap="round"
     tabuleiro.lineJoin="round"
@@ -61,8 +59,8 @@ function escreverTracinhos(){
     
     for(let i=0;i<(palavraSecreta.length);i++){
         
-        tabuleiro.moveTo(10+(38*i),40)
-        tabuleiro.lineTo(25+(10+(38*i)),40)
+        tabuleiro.moveTo(10+(36*i),40)
+        tabuleiro.lineTo(24+(10+(36*i)),40)
         
     }
 
@@ -87,7 +85,7 @@ function escreverLetraIncorreta(letra, erros){
 
 function ganhou(){
 
-    tabuleiro.clearRect(0, 0, 375, 90)
+    tabuleiro.clearRect(0, 0, 375, 80)
     tabuleiro.font ="40px bold"
     tabuleiro.fillStyle ="white"
     tabuleiro.fillText("VOCÊ GANHOU",35, 50)
@@ -99,7 +97,7 @@ function ganhou(){
 
 function perdeu(){
 
-    tabuleiro.clearRect(0, 0, 375, 90)
+    tabuleiro.clearRect(0, 0, 375, 80)
     tabuleiro.font ="40px bold"
     tabuleiro.fillStyle ="white"
     tabuleiro.fillText("ENFORCADO",32, 50)
@@ -120,7 +118,7 @@ function letraClicada(letra){
 
         if(palavraSecreta.includes(letra)){
 
-            console.log("Contem a "+letra)
+           
             
             for(let i=0; i<palavraSecreta.length;i++){
     

@@ -16,9 +16,6 @@
         1px 1px rgb(0, 0, 0);
 }
 
-/* Pagina Incial - Menu*/
-
-
 
 body {
     /*overflow: hidden;*/
@@ -44,7 +41,7 @@ header {
 
 #menu {
     width: 100%;    
-    height: 6vh; /*alterado de 50vh em 28-07-22*/
+    height: 6vh; 
     display: flex;
     align-items: center;
     justify-content: center; 
@@ -76,7 +73,7 @@ header {
 
 .screen {
     width: 100%;
-    margin-top: 0.5rem auto;
+    margin-top: 0.5rem;
     display: flex;
     /*flex-shrink: 2;*/
     justify-content: center;
@@ -93,7 +90,7 @@ header {
     min-width: 280px;
     min-height: 250px;
     border-radius: 10px;
-    margin: 0.1rem auto;
+    margin: 0.1rem auto 0.1rem auto;
     /*background-color: rgba(109, 78, 10, 0.9);*/
     background-color: rgba(85, 82, 74, 0.9)
     box-shadow: 5px 5px 5px 2px rgba(0, 0, 0, 0.5);
@@ -128,23 +125,23 @@ header {
 }
 
 
+#tabuleiro {
+    width: 50%;
+    margin-top: 0.3rem;
+    /*display: flex;
+    flex-shrink: 2;
+    justify-content: center;*/
+}
+
+
 .teclado{
     padding: 0.5rem;
-    justify-content: center;
+    display: flex;
+    justify-content:center;
     
         
 }
 
-#autor{
-    display: flex;
-    color: white;
-    justify-content:space-between;
-
-}
-
-#link__git{
-    color:white;
-}
 
 .teclado__area {
     width: 42%;
@@ -159,8 +156,13 @@ header {
     height: 3rem;
     text-align: center;
     align-items: center;
+    margin-left: 0.5rem;
     
 }
+.teclado__botao:first-child{
+    margin-left: 0;
+}
+
 
 .teclado__botao:hover {
     color: goldenrod;
@@ -171,51 +173,35 @@ header {
 }
 
 .teclado__linha1 {
-    margin-left: 0.65rem;
-    margin-bottom: 0.5;
+    display: flex;
+    justify-content:center;
+    margin-bottom: 0.3rem;
  
 }
  
 .teclado__linha2 {
-     margin-left: 1.75rem;
-     margin-bottom: 0.5;
+    display: flex;
+    justify-content:center;
+    margin-bottom: 0.3rem;
   
 }
  
 .teclado__linha3 {
-     margin-left: 3.85rem;
-  
-}
-
-
-
-#tabuleiro {
-    width: 50%;
-    margin-top: 0.5rem;
-    /*display: flex;
-    flex-shrink: 2;
-    justify-content: center;*/
-}
-
-input {
     display: flex;
-    flex-shrink: 3;
-    width: 4rem;
-    color: darkred;
-    text-shadow: var(--text-shadow);
-    border: none;
-    outline: none;
-    border-bottom: 5px solid black;
-    margin: 2px;
-    font-size: 200%;
-    font-weight: 800;
-    text-align: center;
-    animation: backInDown;
-    animation-duration: 2.4s;
+    justify-content:center;
+      
 }
 
-.input {
-    visibility: hidden;
+
+#autor{
+    display: flex;
+    color: white;
+    justify-content:space-between;
+
+}
+
+#link__git{
+    color:white;
 }
 
 
@@ -286,7 +272,7 @@ input {
     }
 
     #tabuleiro {
-        width: 55%;
+        width: 52%;
     }
 
     .teclado{
@@ -299,8 +285,8 @@ input {
     }
     .teclado__botao{
         font-size: 130%;
-        width: 1.8rem;
-        height: 1.8rem;
+        width: 1.6rem;
+        height: 1.6rem;
     }
 
     #autor{
